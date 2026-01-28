@@ -14,7 +14,11 @@ MIN_ZOOM = 1
 MAX_ZOOM = 5
 DEFAULT_RANDOM_LIVE_PERCENTAGE = 50
 
-PATTERNS_DIR = "patterns"
+#PATTERNS_DIR = "patterns"
+PATTERNS_DIR = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)),
+    "patterns"
+)
 
 def load_patterns_from_csv():
     patterns = {}
